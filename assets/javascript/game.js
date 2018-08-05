@@ -1,14 +1,43 @@
 //Step 1: Ready the Document
 
 // Here we establish the "targetNumber" (set to 50 in this example).
-var targetNumber = 0;
+var targetNumber = null;
 var wins = 0;
-var loses = 0;
+var losses = 0;
 var counter = 0;
+
+var updateWins = function() {
+    $("#wins").text(wins);
+};
+
+var updateLosses = function(){
+    $("#losses").text(losses)
+};
+
+var updateCounter = function(){
+    $("#counter").text(counter)
+
+};
+
+var updateTargetNumber = function(){
+       targetNumber = Math.floor(Math.random()*(120-19+1)+19);
+       $("#number-to-guess").text(targetNumber);
+        };
+
+        console.log(updateTargetNumber)
+        
+        //
+  
+
+
+// var resetRound = function(){
+//     targetNumber = 0;
+//     startGame()
+// }
 
 //MAJOR TASK 1: CREATE RANDOM NUMBER TO GUESS 
 //create a random number from 19-120
- function randomIntFromInterval(min, max){
+function randomIntFromInterval(min, max){
     return Math.floor(Math.random()*(max-min+1)+min);
     }
 var targetNumber = randomIntFromInterval(19,120)
@@ -36,10 +65,7 @@ $("#number-to-guess").text(targetNumber);
     imageCrystal.attr("data-crystalvalue", numberOptions[i]);
     $("#crystals").append(imageCrystal);
 }
-
-
- //MAJOR TASK 3: OBTAIN DATA FROM DYNAMIC BUTTONS UPON CLICK AND ADD DATA TO DISPLAY BASED ON GUESS 
-
+     //MAJOR TASK 3: OBTAIN DATA FROM DYNAMIC BUTTONS UPON CLICK AND ADD DATA TO DISPLAY BASED ON GUESS 
 
 $(".crystal-image").on("click",function() {
 //Extract crystal value from data attribute
@@ -55,16 +81,49 @@ if (counter === targetNumber) {
         // If the numbers match we'll celebrate the user's win.
         alert("You win!");
         wins++;
-        $("#wins").text(wins);
-        alert("Would you like to play again?");
+        counter = 0;
+        updateWins();
+        updateCounter();
+        updateTargetNumber();
+        
+        
+        // if(confirm("Do you want to play again?")){
+        //     txt === true;
+        //     updateTargetNumber()
+ 
+           
+        // } else {
+        //     resetGame()
+        // }
+        
+        
         // Here we added an "else if" condition. If the user's counter ever exceeds the targetNumber...
     } else if (counter >= targetNumber) {
         // Then they are alerted with a loss.
-        alert("You lose!!");
-        $("#losses").text(losses);
+        losses++;
+        counter = 0;
+        updateLosses();
+        updateCounter();
+        updateTargetNumber();
+        alert("You lose and suck at math!!");
+    
     };
 
-})
+});
+
+
+
+function resetGame (){
+    var targetNumber = 0;
+    var wins = 0;
+    var loses = 0;
+    var counter = 0;
+
+}
+
+
+
+
 
 
 // //Why does this not work?  Tried with and without hash
