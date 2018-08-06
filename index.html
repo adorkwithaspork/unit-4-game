@@ -5,27 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>simple crystal game</title>
-    <style type="text/css">
-
     
-    .card {
-        float: left;
-        margin: 10px;
-
-      }
-      .crystal-image {
-        width: 300px;
-        height: 300px;
-        margin: 50px; 
-        clear: both
-      }
-      .jumbotron{
-        text-align: center
-      }
-      
-
-      
-    </style>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="./assets/css/style.css">
 
@@ -33,14 +13,14 @@
 <body>
 
     <div class="jumbotron">
-        <h1 class="display-5">Welcome to the Crystal Collector Game!</h1>
-        <p class="lead">This is a guessing game!
-            There are four crystals displayed as buttons below.
-            You will be shown a random number at the start of the game.
-            When you click on a crystal it will add a specific amount of points to the your  total score.
-            You win the game if your total score matches the random number.  If you go above the random number, you lose.  
-            Your  total score is displayed and updated after each crystal is clicked.
-            The number of games won and lost will be displayed.</p>
+        <h1 class="display-10">Welcome to the Crystal Collector Game!</h1>
+        <p class="lead">
+            <p>This is a guessing game!</p>
+            <p>There are four crystals displayed as buttons below.</p>
+            <p>You will be shown a number to guess at the start of the game.</p>
+            <p>When you click on a crystal it will add an amount of points to the your total score.</p>
+            <p>You win the game if your total score matches the random number.  If you go above the random number, you lose. </p> 
+            <p>Good Luck!</p>
         <hr class="my-4">
       </div>
 
@@ -58,8 +38,8 @@
             <div class="col-md-3">
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
-                      <h5 class="card-title">New score:</h5>
-                      <h6 class="card-subtitle mb-2 text-muted"><span id="counter">?</span></h6>
+                      <h5 class="card-title">Total Score:</h5>
+                      <h6 class="card-subtitle mb-2 text-muted"><span id="counter">0</span></h6>
                       
                     </div>
                   </div>

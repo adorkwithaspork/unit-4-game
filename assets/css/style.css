@@ -1,3 +1,25 @@
 .crystal.image{
-    margin: 40px;
+    margin: 20px;
 }
+
+ 
+.card {
+ 
+    margin: 0 auto;
+    font-family:fantasy;
+    font-size: 20px;
+
+  }
+  .crystal-image {
+    width: 300px;
+    height: 300px;
+    margin: 50px; 
+    clear: both
+  }
+  .jumbotron {
+    text-align: center;
+    font-family: fantasy;
+    margin-bottom: -20px;
+
+  }
+  
