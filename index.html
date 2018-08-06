@@ -7,21 +7,98 @@
     <title>simple crystal game</title>
     <style type="text/css">
 
+    
+    .card {
+        float: left;
+        margin: 10px;
+
+      }
       .crystal-image {
         width: 300px;
         height: 300px;
         margin: 50px; 
+        clear: both
       }
+      .jumbotron{
+        text-align: center
+      }
+      
+
+      
     </style>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
 <body>
-    <h1>Number to Guess: <span id="number-to-guess"></span></h1>
-    <h1>New score: <span id="counter"></span></h1>
-    <h1>Wins: <span id="wins"></span></h1>
-    <h1>Losses: <span id="losses"></span></h1>
+
+    <div class="jumbotron">
+        <h1 class="display-5">Welcome to the Crystal Collector Game!</h1>
+        <p class="lead">This is a guessing game!
+            There are four crystals displayed as buttons below.
+            You will be shown a random number at the start of the game.
+            When you click on a crystal it will add a specific amount of points to the your  total score.
+            You win the game if your total score matches the random number.  If you go above the random number, you lose.  
+            Your  total score is displayed and updated after each crystal is clicked.
+            The number of games won and lost will be displayed.</p>
+        <hr class="my-4">
+      </div>
+
+      <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Number to guess:</h5>
+                      <h6 class="card-subtitle mb-2 text-muted"><span id="number-to-guess"></span></h6>
+                      
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">New score:</h5>
+                      <h6 class="card-subtitle mb-2 text-muted"><span id="counter">?</span></h6>
+                      
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3">
+              
+             <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Wins:</h5>
+              <h6 class="card-subtitle mb-2 text-muted"><span id="wins">0</span></h6>
+              
+            </div>
+          </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Losses:</h5>
+                      <h6 class="card-subtitle mb-2 text-muted"><span id="losses">0</span></h6>
+                      
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+      
+
+     
+
+
+        
+
+           
+
+              <br>
+              <br>
+
+
   <div id= "crystals">
     <!-- <img class= "crystal-image" src="./assets/images/images (1).jpeg" alt="crystals"> -->
   </div>
