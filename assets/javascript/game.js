@@ -49,10 +49,11 @@ $("#number-to-guess").text(targetNumber);
 
   
 //MAJOR TASK 2: CREATE DYNAMIC BUTTONS FOR CRYSTALS WITH DATA VALUES
-  var numberOptions = [1,2,3,4,5,6,7,8,9,10,11,12];
+  var numberOptions = [2,3,4,5,6,7,8,9,10,11,12];
 
    // Next we create a for loop to create crystals for every numberOption.
    for (var i = 0; i < 4; i++) {
+       numberOptions[i] =randomIntFromInterval(2,12)
 
     var crystalSource= ["assets/images/2-Star_Crystal.png", "assets/images (1).jpeg", "assets/images/images (2).jpeg,", "assets/images.jpeg"];
     // For each iteration, we will create an imageCrystal
@@ -108,7 +109,7 @@ if (counter === targetNumber) {
         updateLosses();
         updateCounter();
         updateTargetNumber();
-        alert("You lose and suck at math!!");
+        alert("You lose!!");
     
     };
 
